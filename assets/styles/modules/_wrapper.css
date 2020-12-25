@@ -1,0 +1,176 @@
+.wrapper {
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    max-width: 1236px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    &--card {
+        max-width: 350px;
+        background-color: white;
+
+        @mixin atSmall {
+            max-width: 400px;
+        }
+
+        @mixin atSmallSlightlyLarger {
+            max-width: 500px;
+        }
+
+        @mixin atMedium {
+            max-width: 650px;
+        }
+
+        @mixin  atMediumSlightlyLarger {
+            max-width: 750px;
+        }
+
+
+        @mixin atLarge {
+            max-width: 850px;
+        }
+    }
+
+    &--Menu {
+        max-width: 1070px;
+    }
+
+    &--medium {
+        max-width: 976px;
+    }
+
+    &--large {
+        max-width: 750px;
+    }
+
+    &--Xlarge {
+        max-width: 850px;
+    }
+
+    &--small {
+        max-width: 500px;
+    }
+
+
+    &--no-padding-until-medium {
+        padding-left: 0px;
+        padding-right: 0px;
+
+        @mixin atMedium {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+    }
+
+    &--no-padding-until-large {
+        padding-left: 0px;
+        padding-right: 0px;
+
+        @mixin atMedium {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        @mixin atLarge {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+    }
+
+    &--no-padding-until-large-Menu {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @mixin atMedium {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @mixin atMenuFlexWrap {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        @mixin atLarger {
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        
+        @mixin atMenuDesktop {
+            padding-left: 18px;
+            padding-right: 18px;
+
+        }
+
+    }
+
+    .wrapper{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &--b-margin {
+        margin-bottom: 1rem;
+
+        @mixin atSmall {
+            margin-bottom: 1.75rem;
+        }
+
+    }
+
+    &--b-margin-large {
+        margin-bottom: 1rem;
+
+        @mixin atSmall {
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    &--b-padding {
+        padding-bottom: 1rem;
+
+        @mixin atSmall {
+            padding-bottom:  1.75rem;
+        }
+
+    }
+    
+
+    &--high-z {
+        z-index: 20;
+        position: relative;
+    }
+
+    &--overflow-visible {
+        overflow: visible;
+    }
+
+    &--order-form {
+        margin-left: 0em;
+        margin-right: 0em;
+
+        @mixin atMedium {
+            margin-left: 1em;
+            position: relative;
+            transform: translateX(20px);
+        }
+
+        @mixin atLarge {
+            margin-left: 5em;
+        }
+    }
+
+    &--overflow-visible--phone-size {
+        overflow: visible;
+
+        @mixin atPhoneSize {
+            overflow: hidden;
+        }
+    }
+
+
+}

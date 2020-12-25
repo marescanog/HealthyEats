@@ -1,0 +1,150 @@
+.accordion{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+
+    &--card {
+        background-color: #fff;
+        border: 0px;
+        margin-bottom: 20px;
+        box-shadow: 0 3px 45px 0 rgba(63,92,117,0.15);
+
+        &--header {
+            background: none;
+            padding: 10px;
+            border: 0;
+        }
+    }
+
+    &--btn-trigger {
+        border: 0;
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        background: none;
+        align-items: center;
+        justify-content: space-between;
+        outline: none;
+
+        h6{
+            font-size: 0.9rem;
+            font-weight: 400;
+            font-size: 0.9rem;
+            border: 0;
+            margin: 0;
+            text-align: justify;
+
+            @mixin atPhoneSize {
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            @mixin atSmallSlightlyLarger {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    &--btn-trigger-expanded {
+        border: 0;
+    }
+
+    &--icon-up {      
+        transform: rotate(0deg);
+        transition: transform .3s ease-out;   
+        min-width: 20px;
+        min-height: 20px;
+        min-height: 24px;
+        margin-left: 10px;
+        @mixin atPhoneSize {
+            min-width: 24px;
+            min-height: 24px;
+            margin-left: 0;
+        }
+    }
+
+    &--icon-down {
+        transform: rotate(-180deg) translateY(3px);
+    }
+
+    &--hr{
+        position: relative;
+        transform: translateY(13px);
+        transform: translatex(-3px);
+        width: 100%;
+        max-height: 1px;
+        background-color: rgb(236, 230, 230);
+        padding: 0.05rem 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        @mixin atSmall {
+            max-width: 600px;
+            padding: 0.05rem 0rem;
+        }
+
+        @mixin atMedium {
+            max-width: 600px;
+            padding: 0.05rem 15rem;
+        }
+
+        @mixin atMediumSlightlyLarger {
+            padding: 0.05rem 22rem;
+        }
+
+        @mixin atLarge{
+            padding: 0.05rem 25rem;
+        }
+    }
+
+    &--p-style{
+        margin-left: 0px;
+        margin-right: 0px;
+        font-weight: 300;
+        line-height: 1.65;
+        text-align: justify;
+        font-size: 0.9rem;
+
+        @mixin atPhoneSize {
+            font-size: 1.05rem;
+            line-height: 1.65;
+        }
+
+        @mixin atSmallSlightlyLarger {
+            margin-left: 5px;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        @mixin atMedium {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        @mixin atLarge{
+            margin-left: 40px;
+            margin-right: 50px;
+        }
+    }
+
+    &__panel{
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+    &__panel__expanded{
+        padding: 0 18px;
+        background-color: white;
+        max-height: 600px;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+}

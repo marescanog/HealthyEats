@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./order_files/css" rel="stylesheet" type="text/css">
+  <title>Healthy Eats</title>
+  <meta name="keywords" content="healthy meals, meal bundles, weekly meal delivery service">
+  <meta name="description" content="Your healthy meals. One delivery away. We create nutritious and flavorful meals that bring out the best in you.">
+  <script src="./order_files/flatpickr.js.download"></script>
+  <link rel="stylesheet" href="./css_files/styles.css">
+<style>@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap);</style>
+<style>@import url(https://fonts.googleapis.com/css2?family=Saira+Condensed&family=Ubuntu:wght@700&display=swap);</style>
+<style>@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);</style>
+</head>
+
+<body>
+  <header class="site-header site-header--dark">
+    <div class="wrapper">
+      <div class="site-header__logo">
+        <a href="index.html"><img src="./order_files/healthy-eats-low5.png"></a>
+      </div>
+      <div class="site-header__menu-icon-border"></div>
+      <div class="site-header__menu-icon">
+        <div class="site-header__menu-icon__middle"></div>
+      </div>
+
+      <div class="site-header__menu-content">
+        <div class="site-header__btn-container">
+        </div>
+        <nav class="primary-nav primary-nav--pull-right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Our Beginning</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="large-hero">
+    <picture>
+        <source sizes="1920px" srcset="assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w" media="(min-width: 1380px)">
+        <source sizes="1320px" srcset="assets/images/hero--medium.jpg 1380w, assets/images/hero--medium-hi-dpi.jpg 2760w" media="(min-width: 990px)">
+        <source sizes="990px" srcset="assets/images/hero--small.jpg 990w, assets/images/hero--small-hi-dpi.jpg 1980w" media="(min-width: 640px)">
+        <img sizes="640px" srcset="assets/images/hero--smaller.jpg 640w, assets/images/hero--smaller-hi-dpi.jpg 1280w" alt="Healthy food arranged on table" class="large-hero__image">
+      </picture>
+    <div class="large-hero__text-content large-hero__text-content__other-page">
+      <div class="wrapper">
+        <h1 class="large-hero__title large-hero__title__other-page">Order Now!</h1>
+        <p class="large-hero__description">Great tasting healthy meals delivered to you everyday</p>
+      </div>
+    </div>
+  </div>
+   
+  <div class="page-section">
+      <div class="wrapper wrapper--overflow-visible">
+          <div class="content-box">
+              <!--Title-->
+              <div class="wrapper">
+                <div>
+                  <h2 class="headline headline--centered headline--light  headline--no-b-margin">
+                      One step away from <strong>Greatness!</strong>
+                  </h2>
+                  <div>
+                      <h3 class="headline headline--centered headline--blue headline--smaller headline--light headline--move-up">
+                          Fill up our Order Form
+                      </h3>
+                  </div>
+                </div>       
+              </div>
+
+              <!--Order Form Start-->
+              <div class="wrapper wrapper--order-form">
+                <form id="form">
+                <div class="row row--gutters">
+                  <!--Left Side of Order Form-->
+                  <div class="row__medium-8 row__medium-8--smaller2">
+                    <div class="order-form--left-side">
+                      
+                        <!--Order Detail segment Start-->
+                          <div>
+                            <h5 class="order-form--selection-title">Order Details</h5>
+                            <div class="order-form--hr"></div>
+                          </div>
+                          <div class="order-form--contents order-form--contents--order-details">
+                            <div class="order-form--label-group order-form--contents--feilds">
+                              <label>Meal Plan</label>
+                              <span style="color: #f00;">*</span>
+                              <select id="meal-plan" name="meal-plan">
+                                <option value="Cal-Light">Calorie Light</option>
+                                <option value="Cal-Reg">Calorie Regular</option>
+                                <option value="Protein-Reg">Hi-Protein Regular</option>
+                                <option value="Protein-Heavy">Hi-Protein Heavy</option>
+                                <option value="Keto-Light">Keto Light</option>
+                                <option value="Keto-Reg">Keto Regular</option>
+                                <option value="Keto-Heavy">Keto Heavy</option>
+                              </select>
+                            </div>
+                            <div class="order-form--label-group-right order-form--contents--feilds">
+                              <label>Calories</label>
+                              <input id="calories" type="text" name="calories" value="800 kCal" disabled="">
+                            </div>
+                            <div id="dateError" class="order-form--label-group order-form--contents--feilds">
+                              <label>Start Date</label>
+                              <span style="color: #f00;">*</span>
+                              <input id="flatpickr" name="start-date" placeholder="Select Date..." type="hidden" class="flatpickr-input">
+                              <div class="p-block">
+                                <p>Note: Deliveries Always Start on a Monday. Cut-off period for the week is every Saturday.</p>
+                              </div>
+                            </div>
+                            <div class="order-form--label-group-right order-form--contents--feilds">
+                              <label>No. of Weeks</label>
+                              <span style="color: #f00;">*</span>
+                              <select id="weeks" name="weeks required">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!--Personal Details Segment Start-->
+                          <div>
+                            <h5 class="order-form--selection-title">Personal Details</h5>
+                            <div class="order-form--hr"></div>
+                          </div>
+                          <div class="order-form--contents order-form--contents--personal-details">
+                            <div id="nameError" class="order-form--label-group order-form--contents--feilds">
+                              <label>Full Name</label>
+                              <span style="color: #f00;">*</span>
+                              <input id="full-name" type="text">
+                            </div>
+                            <div id="emailError" class="order-form--label-group-right order-form--contents--feilds">
+                              <label>Email Address</label>
+                              <span style="color: #f00;">*</span>
+                              <input id="email-address" type="email">
+                            </div>
+                            <div id="contact-numberError" class="order-form--label-group order-form--contents--feilds">
+                              <label>Contact number</label>
+                              <span style="color: #f00;">*</span>
+                              <input id="mobile-number" type="text">
+                            </div>
+                            <div class="order-form--label-group-right order-form--contents--feilds">
+                              <label>Food Allergy</label>
+                              <input id="Allergy" type="text">
+                            </div>
+                          </div>
+                          <!--Address Details Segment Start-->
+                          <div>
+                            <h5 class="order-form--selection-title">Delivery Details</h5>
+                            <div class="order-form--hr"></div>
+                          </div>
+                          <div class="order-form--contents">
+                            <div id="addressError" class="order-form--label-group-right order-form--contents--feilds">
+                              <label>Address</label>
+                              <span style="color: #f00;">*</span>
+                              <input id="Address" type="text">
+                              <p>Note: Please indicate House/Unit No./Building, Street, Barangay, City.</p>
+                            </div>
+                          </div>
+
+
+                      </div>
+                  </div>
+
+                  <!--Right Side of Order Form-->
+                  <div class="row__medium-4 row__medium-4--larger2 row__b-margin-regardless">
+                    <div class="order-form--right-side">
+                      <h5 class="order-form--selection-title">Total Cost</h5>
+                      <div class="order-form--hr"></div>
+                      <div class="order-form--contents">
+                        <div class="order-form--total-cost-box">
+                          <div class="price-text">
+                            <p>
+                              <span id="price-display">
+                                ₱ 1,500
+                              </span> 
+                            </p>
+                          </div>
+                          <div class="small">
+                            <span id="meal-name-display">
+                              Calorie Light
+                            </span>
+                            <br>
+                            <span id="week-number-display">1</span>
+                            <span id="week-display-plural">week</span>
+                          </div>
+                          <div class="price-text d-flex">
+                            <div class="price-text price-text--left-aligned">
+                              <p>
+                                +
+                              </p>
+                            </div>
+                            <div class="price-text">
+                              <p>
+                                <span id="delivery-charge-display">
+                                  ₱ 100
+                                </span>
+                              </p>
+                              <div class="small small--no-padding">
+                                <span>
+                                  Delivery Charge
+                                </span>
+                                <br>
+                                <span>
+                                  (Php 20 per day)
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="order-form--hr order-form--hr--total"></div>
+                          <div class="price-text d-flex">
+                            <div class="price-text price-text--left-aligned price-text--orange">
+                              <p>
+                                Php
+                              </p>
+                            </div>
+                            <div class="price-text price-text--orange">
+                              <p>
+                                <span id="total-cost">
+                                  1,600
+                                </span>
+                              </p>
+                              <div class="small small--no-padding">
+                                <span>
+                                  Total Cost
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Terms and Conditions-->
+                      <div class="terms-conditions">
+                        <div class="terms-conditions terms-conditions--right">
+                          <p>
+                            <input id="terms-checkbox" type="checkbox">
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            I have read and agreed to all the <strong><a href="terms.html" target="_blank">Terms &amp; Conditions</a></strong> by Healthy Eats.
+                          </p>
+                        </div>
+                      </div>
+
+                      <button class="btn--submit-form-contact btn--submit-form-contact--center" type="submit"> 
+                          <img src="./order_files/icons8-paper-plane.svg" class="paper-plane">Submit Order
+                      </button>
+                         
+                    </div>
+                  </div>
+
+
+                </div></form>
+              </div>
+            <!--Order Form End-->
+        </div>          
+    </div>         
+  </div>
+
+  
+
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="assets/images/bottom-banner-hi.png" media="(min-width: 1020px)">
+      <source srcset="assets/images/bottom-banner-medium.png" media="(min-width: 800px)">
+          <source srcset="assets/images/bottom-banner-small.png" media="(min-width: 560px)">
+      <img src="./order_files/bottom-banner-smaller.png" alt="Healthy Eats bottom banner" class="bottom-banner">
+    </picture>
+  <div class="wrapper wrapper--overflow-visible">
+    <p>
+
+        </p><div class="site-footer__text-mid">
+          <a href="https://www.facebook.com/healthyy.eatss/" target="_blank"><img src="./order_files/facebook.png" alt="facebook icon"></a>
+          <a href="https://twitter.com/Healthy96402730" target="_blank"><img src="./order_files/twitter.png" alt="twitter icon"></a>
+          <a href="https://www.instagram.com/healthyyyeatsss1234/" target="_blank"><img src="./order_files/instagram.png" alt="instagram icon"></a>
+        </div>
+        <span class="site-footer__text">© 2020 HealthyEats. All rights reserved.</span>
+    <p></p>
+  </div>
+  </footer>
+
+  <div id="modal-notice" class="modal-overlay">
+    <div id="modal-notif" class="modal--box modal--box--show open">
+      <div>
+        <img class="modal--image" src="./order_files/high-importance.svg">
+      </div>
+      <div class="modal--title">
+          Notice
+      </div>
+      <div class="modal--text">
+        Our weekly delivery cut-off for order reservations closes every Saturday. Any orders placed before the cutoff will be considered an early booking for next week.      
+      </div>
+      <div class="button--footer">
+        <div class="modal--button modal--button--cancel">
+          <a href="index.html" style="text-decoration: none;">
+            Go Back
+          </a>
+        </div>
+        <div>
+          <button id="button-close-notif" class="modal--button">
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-error-overlay" class="modal-overlay">
+    <div id="modal-error" class="modal--box close">
+      <div>
+        <img class="modal--image" src="./order_files/error.svg">
+      </div>
+      <div class="modal--title">
+          Required Feilds
+      </div>
+      <div class="modal--text">
+        One or more fields have an error or is mising information. Please check and try again.      
+      </div>
+      <div>
+        <div>
+          <button id="button-close-error" class="modal--button modal--button">
+            okay
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-terms-notif-overlay" class="modal-overlay">
+    <div id="modal-terms-notif" class="modal--box modal--box--terms close">
+      <div>
+        <img class="modal--image" src="./order_files/high-importance.svg">
+      </div>
+      <div class="modal--title">
+          Please agree to terms and conditions
+      </div>
+      <div class="modal--text">
+          Click on this <a href="terms.html" target="_blank">terms and conditions link</a> to view the details. A new window will open with the terms and conditions. After reading the terms, please check the checkbox on the order page to indicate that you agree to the terms and conditions and try submitting the order again.      
+      </div>
+      <div>
+        <div>
+          <button id="button-close-terms-notif" class="modal--button">
+            Okay
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./order_files/bundled.js.download"></script><div class="flatpickr-calendar animate" tabindex="-1"><div class="flatpickr-months"><span class="flatpickr-prev-month flatpickr-disabled"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path></svg></span><div class="flatpickr-month"><div class="flatpickr-current-month"><select class="flatpickr-monthDropdown-months" aria-label="Month" tabindex="-1"><option class="flatpickr-monthDropdown-month" value="11" tabindex="-1">December</option></select><div class="numInputWrapper"><input class="numInput cur-year" type="number" tabindex="-1" aria-label="Year" min="2020"><span class="arrowUp"></span><span class="arrowDown"></span></div></div></div><span class="flatpickr-next-month"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path></svg></span></div><div class="flatpickr-innerContainer"><div class="flatpickr-rContainer"><div class="flatpickr-weekdays"><div class="flatpickr-weekdaycontainer">
+      <span class="flatpickr-weekday">
+        Sun</span><span class="flatpickr-weekday">Mon</span><span class="flatpickr-weekday">Tue</span><span class="flatpickr-weekday">Wed</span><span class="flatpickr-weekday">Thu</span><span class="flatpickr-weekday">Fri</span><span class="flatpickr-weekday">Sat
+      </span>
+      </div></div><div class="flatpickr-days" tabindex="-1"><div class="dayContainer"><span class="flatpickr-day prevMonthDay flatpickr-disabled" aria-label="November 29, 2020">29</span><span class="flatpickr-day prevMonthDay flatpickr-disabled" aria-label="November 30, 2020">30</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 1, 2020">1</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 2, 2020">2</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 3, 2020">3</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 4, 2020">4</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 5, 2020">5</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 6, 2020">6</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 7, 2020">7</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 8, 2020">8</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 9, 2020">9</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 10, 2020">10</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 11, 2020">11</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 12, 2020">12</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 13, 2020">13</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 14, 2020">14</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 15, 2020">15</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 16, 2020">16</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 17, 2020">17</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 18, 2020">18</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 19, 2020">19</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 20, 2020">20</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 21, 2020">21</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 22, 2020">22</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 23, 2020">23</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 24, 2020">24</span><span class="flatpickr-day today flatpickr-disabled" aria-label="December 25, 2020" aria-current="date">25</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 26, 2020">26</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 27, 2020">27</span><span class="flatpickr-day " aria-label="December 28, 2020" tabindex="-1">28</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 29, 2020">29</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 30, 2020">30</span><span class="flatpickr-day flatpickr-disabled" aria-label="December 31, 2020">31</span><span class="flatpickr-day nextMonthDay flatpickr-disabled" aria-label="January 1, 2021">1</span><span class="flatpickr-day nextMonthDay flatpickr-disabled" aria-label="January 2, 2021">2</span><span class="flatpickr-day nextMonthDay flatpickr-disabled" aria-label="January 3, 2021">3</span><span class="flatpickr-day nextMonthDay" aria-label="January 4, 2021" tabindex="-1">4</span><span class="flatpickr-day nextMonthDay flatpickr-disabled" aria-label="January 5, 2021">5</span><span class="flatpickr-day nextMonthDay flatpickr-disabled" aria-label="January 6, 2021">6</span><span class="flatpickr-day nextMonthDay flatpickr-disabled" aria-label="January 7, 2021">7</span><span class="flatpickr-day nextMonthDay flatpickr-disabled" aria-label="January 8, 2021">8</span><span class="flatpickr-day nextMonthDay flatpickr-disabled" aria-label="January 9, 2021">9</span></div></div></div></div></div>
+
+
+</body></html>

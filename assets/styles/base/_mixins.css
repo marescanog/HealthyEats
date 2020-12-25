@@ -1,0 +1,81 @@
+
+@define-mixin atMini {
+    @media (min-width:400px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atPhoneSize {
+    @media (min-width:460px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atSmall {
+    @media (min-width:540px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atSmallSlightlyLarger {
+    @media (min-width:620px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atSmallL {
+    @media (min-width:700px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atMedium {
+    @media (min-width:800px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atMediumSlightlyLarger {
+    @media (min-width:900px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atMediumL {
+    @media (min-width:1000px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atLarge {
+    @media (min-width:1010px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atLarger {
+    @media (min-width:1150px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atMenuDesktop {
+    @media (min-width:1200px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atMenuFlexWrap {
+    @media (min-width:1025px){
+        @mixin-content;
+    }
+}
+
+
+@define-mixin clearfix {
+    &::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+}

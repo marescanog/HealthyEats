@@ -1,0 +1,204 @@
+.menu-UI{
+    display: flex;  
+    width:max-content;
+    margin: 0;
+
+    &--body {
+        padding-bottom:30px;
+    }
+
+    &--visible {
+        display: block !important;
+    }
+    &--hidden {
+        display: none !important;;
+    }
+
+
+    &--desktop {
+        display: none;  
+        @mixin atSmall {
+            display: block;  
+        }
+    }
+
+    &--mobile {
+        display: block !important;;  
+        @mixin atSmall {
+            display: none !important;;  
+        }
+    }
+
+    &--day {
+        font-size: 13px;
+        font-weight: 700;
+        text-align: left;
+        margin: 20px 0px;
+        letter-spacing: 1.86px;
+        text-transform: uppercase;
+        color: rgba(32,32,44,0.2);
+        display: block;
+
+        @mixin atSmall {
+            text-align: center;
+        }
+
+        @mixin atMenuDesktop {
+            display: none;
+            &--first {
+                display: block;
+            }
+        }
+    }
+    
+    &--menu-organization-of-rows{
+        padding-bottom: 30px;
+        max-width: 1200px;
+        display: grid;
+        justify-content: center;
+
+        @mixin atSmall {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            max-width: 400px;
+        }
+
+        @mixin atMedium {
+            max-width: 600px;
+        }
+
+        @mixin atMenuFlexWrap {
+            display: flex;
+            max-width: none;
+        }
+
+        @mixin atMenuDesktop {
+            padding-bottom: 0px;
+        }
+    }
+
+    &--row {
+        display: flex;  
+    }
+
+    &--row-content {
+        flex-direction: column;
+        padding: 7.5px;
+
+    }
+
+    &--row-square {
+        display: grid;
+        width: 90vw;
+        height: 166px;
+        padding:12px;
+        background: #FFF;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 3px 45px 0 rgba(63,92,117,0.1);
+
+        @mixin atSmall {
+            display: flex;
+            width: 166px;
+            height: 166px;
+        }
+
+        p{
+            margin: 0px;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            color: rgba(32,32,44,0.67);
+        }
+    }
+
+    &--row-header {
+        width: 100%;
+        flex-basis: 100%;
+        padding-right: 0px;
+        flex: 1;
+        display: flex;
+        box-sizing: inherit;
+        align-items: center;
+        margin-left: auto;
+        margin-top: auto;
+        height: 54px;
+
+        @mixin atMenuDesktop {
+            height: 135px;
+
+            &--first {
+                height: 230px;
+            }
+        }
+        h5{
+            text-align: left;
+            flex: 1;
+            margin: 0;
+            font-size: 21px;
+            font-weight: 700;
+            color: #F5A521;
+            display: block;
+
+            margin-top: 30px;
+            margin-bottom: 0px;
+
+        }
+
+    }
+
+    &--title-icon {
+        transform: translate(10px, 13px);
+        @mixin atSmall{
+            transform: translate(30px, 25px);
+        }
+
+    }
+
+    &--tab-header {
+        margin-bottom: 30px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+
+        &-button {
+            button {
+                border: none;
+                font-size: 21px;
+                font-weight: 700;
+                background: none;
+                text-align: center;
+                color: rgba(32,32,44,0.2);
+                line-height: 1;
+                padding: .6em 1em .4em;
+                outline: none;
+            }
+    
+            &--select {
+                button{
+                    color: rgba(32,32,44,1);
+                }
+
+                button::after {
+                    content: "";
+                    height: 4px;
+                    width: 30px;
+                    display: block;
+                    margin: 15px auto 0 auto;
+                    background-color: transparent;
+                    background-color: #F5A521;
+                }
+            }
+    
+            button:hover{
+                color: rgba(32,32,44,1);
+            }
+        }
+    }
+}
